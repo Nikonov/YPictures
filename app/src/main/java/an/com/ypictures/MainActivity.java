@@ -6,6 +6,8 @@ import android.os.Environment;
 
 import com.appmobileos.android.utils.file.FileUtils;
 
+import org.codehaus.jackson.map.ObjectMapper;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -13,6 +15,9 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Map;
+
+import an.com.ypictures.model.ImageResponse;
 
 /**
  * Created by andrey on 10/08/14.
@@ -43,8 +48,10 @@ public class MainActivity extends Activity {
             connection.connect();
             InputStream in = new BufferedInputStream(connection.getInputStream());
             if (BuildConfig.DEBUG) {
-                FileUtils.saveISInFile(in, new File(Environment.getExternalStorageDirectory(), "y.json"));
+               // FileUtils.saveISInFile(in, new File(Environment.getExternalStorageDirectory(), "y.json"));
             }
+            ObjectMapper mapper = new ObjectMapper(); // can reuse, share globally
+            ImageResponse res = mapper.readValue(in, ImageResponse.class);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
