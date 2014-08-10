@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_thumbnail">130dp</dimen>
+    <dimen name="image_thumbnail_vertical_spacing">1dp</dimen>
+    <dimen name="image_thumbnail_horizontal_spacing">1dp</dimen>
+</resources>

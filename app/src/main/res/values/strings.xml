@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">YPictures</string>
+    <string name="tag_main_fragment">main_frg</string>
 </resources>

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by andrey on 10/08/14.
  */
-public class ImageResponse {
+public class Response {
     private ArrayList<Entry> mEntries;
     private String mId;
     private Links mLinks;
