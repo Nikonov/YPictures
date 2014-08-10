@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -22,11 +22,5 @@
         android:horizontalSpacing="@dimen/image_thumbnail_horizontal_spacing"
         android:numColumns="auto_fit" />
 
-    <TextView
-        android:id="@+id/empty_places"
-        android:visibility="gone"
-        android:textColor="@color/black_50_alpha"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+
+</RelativeLayout>
